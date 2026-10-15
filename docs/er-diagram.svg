@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="1080" viewBox="0 0 1680 1080" role="img" aria-labelledby="title desc">
+<title id="title">Event Management Database ER Diagram</title>
+<desc id="desc">Six PostgreSQL tables. User has organizers and tickets. Organizer has events. Events have tickets and event-sponsor associations. Sponsor has event-sponsor associations. Every relationship is one to zero or more.</desc>
+<rect width="1680" height="1080" fill="#f4f7fa"/>
+<text x="70" y="42" font-family="Arial, sans-serif" font-size="34" font-weight="700" dominant-baseline="text-before-edge" fill="#1a2f41">EVENT MANAGEMENT DATABASE</text>
+<text x="70" y="91" font-family="Arial, sans-serif" font-size="19" font-weight="400" dominant-baseline="text-before-edge" fill="#536c7e">PostgreSQL  |  public schema  |  6 tables  |  6 foreign keys</text>
+<polyline points="490,225 630,225" fill="none" stroke="#6a8598" stroke-width="2"/>
+<polyline points="280,326 280,650" fill="none" stroke="#6a8598" stroke-width="2"/>
+<polyline points="840,362 840,500" fill="none" stroke="#6a8598" stroke-width="2"/>
+<polyline points="630,745 490,745" fill="none" stroke="#6a8598" stroke-width="2"/>
+<polyline points="1400,362 1400,550" fill="none" stroke="#6a8598" stroke-width="2"/>
+<polyline points="1050,620 1190,620" fill="none" stroke="#6a8598" stroke-width="2"/>
+<text x="505" y="200" font-family="Arial, sans-serif" font-size="17" font-weight="700" dominant-baseline="text-before-edge" fill="#346482">1</text>
+<text x="581" y="200" font-family="Arial, sans-serif" font-size="17" font-weight="700" dominant-baseline="text-before-edge" fill="#346482">0..*</text>
+<text x="295" y="343" font-family="Arial, sans-serif" font-size="17" font-weight="700" dominant-baseline="text-before-edge" fill="#346482">1</text>
+<text x="295" y="615" font-family="Arial, sans-serif" font-size="17" font-weight="700" dominant-baseline="text-before-edge" fill="#346482">0..*</text>
+<text x="855" y="379" font-family="Arial, sans-serif" font-size="17" font-weight="700" dominant-baseline="text-before-edge" fill="#346482">1</text>
+<text x="855" y="465" font-family="Arial, sans-serif" font-size="17" font-weight="700" dominant-baseline="text-before-edge" fill="#346482">0..*</text>
+<text x="603" y="720" font-family="Arial, sans-serif" font-size="17" font-weight="700" dominant-baseline="text-before-edge" fill="#346482">1</text>
+<text x="504" y="720" font-family="Arial, sans-serif" font-size="17" font-weight="700" dominant-baseline="text-before-edge" fill="#346482">0..*</text>
+<text x="1415" y="379" font-family="Arial, sans-serif" font-size="17" font-weight="700" dominant-baseline="text-before-edge" fill="#346482">1</text>
+<text x="1415" y="515" font-family="Arial, sans-serif" font-size="17" font-weight="700" dominant-baseline="text-before-edge" fill="#346482">0..*</text>
+<text x="1065" y="595" font-family="Arial, sans-serif" font-size="17" font-weight="700" dominant-baseline="text-before-edge" fill="#346482">1</text>
+<text x="1141" y="595" font-family="Arial, sans-serif" font-size="17" font-weight="700" dominant-baseline="text-before-edge" fill="#346482">0..*</text>
+<rect x="70" y="150" width="420" height="176" fill="#ffffff" stroke="#ccd7e0"/>
+<rect x="70" y="150" width="420" height="50" fill="#183f58"/>
+<text x="88" y="163" font-family="Arial, sans-serif" font-size="22" font-weight="700" dominant-baseline="text-before-edge" fill="#ffffff">&quot;User&quot;</text>
+<text x="82" y="213" font-family="Arial, sans-serif" font-size="11" font-weight="700" dominant-baseline="text-before-edge" fill="#2b7283">PK</text>
+<text x="135" y="210" font-family="Arial, sans-serif" font-size="15" font-weight="700" dominant-baseline="text-before-edge" fill="#1a2f41">user_id</text>
+<text x="325" y="210" font-family="Arial, sans-serif" font-size="14" font-weight="400" dominant-baseline="text-before-edge" fill="#5c6f7f">integer</text>
+<polyline points="84,241 476,241" fill="none" stroke="#edf1f4" stroke-width="1"/>
+<text x="135" y="246" font-family="Arial, sans-serif" font-size="15" font-weight="700" dominant-baseline="text-before-edge" fill="#1a2f41">name</text>
+<text x="325" y="246" font-family="Arial, sans-serif" font-size="14" font-weight="400" dominant-baseline="text-before-edge" fill="#5c6f7f">varchar(100)</text>
+<polyline points="84,277 476,277" fill="none" stroke="#edf1f4" stroke-width="1"/>
+<text x="82" y="285" font-family="Arial, sans-serif" font-size="11" font-weight="700" dominant-baseline="text-before-edge" fill="#2b7283">UQ</text>
+<text x="135" y="282" font-family="Arial, sans-serif" font-size="15" font-weight="700" dominant-baseline="text-before-edge" fill="#1a2f41">email</text>
+<text x="325" y="282" font-family="Arial, sans-serif" font-size="14" font-weight="400" dominant-baseline="text-before-edge" fill="#5c6f7f">email_domain</text>
+<rect x="630" y="150" width="420" height="212" fill="#ffffff" stroke="#ccd7e0"/>
+<rect x="630" y="150" width="420" height="50" fill="#183f58"/>
+<text x="648" y="163" font-family="Arial, sans-serif" font-size="22" font-weight="700" dominant-baseline="text-before-edge" fill="#ffffff">organizer</text>
+<text x="642" y="213" font-family="Arial, sans-serif" font-size="11" font-weight="700" dominant-baseline="text-before-edge" fill="#2b7283">PK</text>
+<text x="695" y="210" font-family="Arial, sans-serif" font-size="15" font-weight="700" dominant-baseline="text-before-edge" fill="#1a2f41">organizer_id</text>
+<text x="885" y="210" font-family="Arial, sans-serif" font-size="14" font-weight="400" dominant-baseline="text-before-edge" fill="#5c6f7f">integer</text>
+<polyline points="644,241 1036,241" fill="none" stroke="#edf1f4" stroke-width="1"/>
+<text x="695" y="246" font-family="Arial, sans-serif" font-size="15" font-weight="700" dominant-baseline="text-before-edge" fill="#1a2f41">name</text>
+<text x="885" y="246" font-family="Arial, sans-serif" font-size="14" font-weight="400" dominant-baseline="text-before-edge" fill="#5c6f7f">varchar(100)</text>
+<polyline points="644,277 1036,277" fill="none" stroke="#edf1f4" stroke-width="1"/>
+<text x="642" y="285" font-family="Arial, sans-serif" font-size="11" font-weight="700" dominant-baseline="text-before-edge" fill="#2b7283">UQ</text>
+<text x="695" y="282" font-family="Arial, sans-serif" font-size="15" font-weight="700" dominant-baseline="text-before-edge" fill="#1a2f41">email</text>
+<text x="885" y="282" font-family="Arial, sans-serif" font-size="14" font-weight="400" dominant-baseline="text-before-edge" fill="#5c6f7f">email_domain</text>
+<polyline points="644,313 1036,313" fill="none" stroke="#edf1f4" stroke-width="1"/>
+<text x="642" y="321" font-family="Arial, sans-serif" font-size="11" font-weight="700" dominant-baseline="text-before-edge" fill="#2b7283">FK</text>
+<text x="695" y="318" font-family="Arial, sans-serif" font-size="15" font-weight="700" dominant-baseline="text-before-edge" fill="#1a2f41">user_id</text>
+<text x="885" y="318" font-family="Arial, sans-serif" font-size="14" font-weight="400" dominant-baseline="text-before-edge" fill="#5c6f7f">integer</text>
+<rect x="1190" y="150" width="420" height="212" fill="#ffffff" stroke="#ccd7e0"/>
+<rect x="1190" y="150" width="420" height="50" fill="#183f58"/>
+<text x="1208" y="163" font-family="Arial, sans-serif" font-size="22" font-weight="700" dominant-baseline="text-before-edge" fill="#ffffff">sponsor</text>
+<text x="1202" y="213" font-family="Arial, sans-serif" font-size="11" font-weight="700" dominant-baseline="text-before-edge" fill="#2b7283">PK</text>
+<text x="1255" y="210" font-family="Arial, sans-serif" font-size="15" font-weight="700" dominant-baseline="text-before-edge" fill="#1a2f41">sponsor_id</text>
+<text x="1445" y="210" font-family="Arial, sans-serif" font-size="14" font-weight="400" dominant-baseline="text-before-edge" fill="#5c6f7f">integer</text>
+<polyline points="1204,241 1596,241" fill="none" stroke="#edf1f4" stroke-width="1"/>
+<text x="1255" y="246" font-family="Arial, sans-serif" font-size="15" font-weight="700" dominant-baseline="text-before-edge" fill="#1a2f41">name</text>
+<text x="1445" y="246" font-family="Arial, sans-serif" font-size="14" font-weight="400" dominant-baseline="text-before-edge" fill="#5c6f7f">varchar(100)</text>
+<polyline points="1204,277 1596,277" fill="none" stroke="#edf1f4" stroke-width="1"/>
+<text x="1202" y="285" font-family="Arial, sans-serif" font-size="11" font-weight="700" dominant-baseline="text-before-edge" fill="#2b7283">UQ</text>
+<text x="1255" y="282" font-family="Arial, sans-serif" font-size="15" font-weight="700" dominant-baseline="text-before-edge" fill="#1a2f41">email</text>
+<text x="1445" y="282" font-family="Arial, sans-serif" font-size="14" font-weight="400" dominant-baseline="text-before-edge" fill="#5c6f7f">email_domain</text>
+<polyline points="1204,313 1596,313" fill="none" stroke="#edf1f4" stroke-width="1"/>
+<text x="1255" y="318" font-family="Arial, sans-serif" font-size="15" font-weight="700" dominant-baseline="text-before-edge" fill="#1a2f41">number</text>
+<text x="1445" y="318" font-family="Arial, sans-serif" font-size="14" font-weight="400" dominant-baseline="text-before-edge" fill="#5c6f7f">phone_domain ?</text>
+<rect x="630" y="500" width="420" height="320" fill="#ffffff" stroke="#ccd7e0"/>
+<rect x="630" y="500" width="420" height="50" fill="#183f58"/>
+<text x="648" y="513" font-family="Arial, sans-serif" font-size="22" font-weight="700" dominant-baseline="text-before-edge" fill="#ffffff">event</text>
+<text x="642" y="563" font-family="Arial, sans-serif" font-size="11" font-weight="700" dominant-baseline="text-before-edge" fill="#2b7283">PK</text>
+<text x="695" y="560" font-family="Arial, sans-serif" font-size="15" font-weight="700" dominant-baseline="text-before-edge" fill="#1a2f41">event_id</text>
+<text x="885" y="560" font-family="Arial, sans-serif" font-size="14" font-weight="400" dominant-baseline="text-before-edge" fill="#5c6f7f">integer</text>
+<polyline points="644,591 1036,591" fill="none" stroke="#edf1f4" stroke-width="1"/>
+<text x="695" y="596" font-family="Arial, sans-serif" font-size="15" font-weight="700" dominant-baseline="text-before-edge" fill="#1a2f41">name</text>
+<text x="885" y="596" font-family="Arial, sans-serif" font-size="14" font-weight="400" dominant-baseline="text-before-edge" fill="#5c6f7f">varchar(200)</text>
+<polyline points="644,627 1036,627" fill="none" stroke="#edf1f4" stroke-width="1"/>
+<text x="695" y="632" font-family="Arial, sans-serif" font-size="15" font-weight="700" dominant-baseline="text-before-edge" fill="#1a2f41">description</text>
+<text x="885" y="632" font-family="Arial, sans-serif" font-size="14" font-weight="400" dominant-baseline="text-before-edge" fill="#5c6f7f">text ?</text>
+<polyline points="644,663 1036,663" fill="none" stroke="#edf1f4" stroke-width="1"/>
+<text x="695" y="668" font-family="Arial, sans-serif" font-size="15" font-weight="700" dominant-baseline="text-before-edge" fill="#1a2f41">address</text>
+<text x="885" y="668" font-family="Arial, sans-serif" font-size="14" font-weight="400" dominant-baseline="text-before-edge" fill="#5c6f7f">varchar(300)</text>
+<polyline points="644,699 1036,699" fill="none" stroke="#edf1f4" stroke-width="1"/>
+<text x="695" y="704" font-family="Arial, sans-serif" font-size="15" font-weight="700" dominant-baseline="text-before-edge" fill="#1a2f41">date_start</text>
+<text x="885" y="704" font-family="Arial, sans-serif" font-size="14" font-weight="400" dominant-baseline="text-before-edge" fill="#5c6f7f">timestamp</text>
+<polyline points="644,735 1036,735" fill="none" stroke="#edf1f4" stroke-width="1"/>
+<text x="695" y="740" font-family="Arial, sans-serif" font-size="15" font-weight="700" dominant-baseline="text-before-edge" fill="#1a2f41">date_end</text>
+<text x="885" y="740" font-family="Arial, sans-serif" font-size="14" font-weight="400" dominant-baseline="text-before-edge" fill="#5c6f7f">timestamp</text>
+<polyline points="644,771 1036,771" fill="none" stroke="#edf1f4" stroke-width="1"/>
+<text x="642" y="779" font-family="Arial, sans-serif" font-size="11" font-weight="700" dominant-baseline="text-before-edge" fill="#2b7283">FK</text>
+<text x="695" y="776" font-family="Arial, sans-serif" font-size="15" font-weight="700" dominant-baseline="text-before-edge" fill="#1a2f41">organizer_id</text>
+<text x="885" y="776" font-family="Arial, sans-serif" font-size="14" font-weight="400" dominant-baseline="text-before-edge" fill="#5c6f7f">integer</text>
+<rect x="70" y="650" width="420" height="248" fill="#ffffff" stroke="#ccd7e0"/>
+<rect x="70" y="650" width="420" height="50" fill="#183f58"/>
+<text x="88" y="663" font-family="Arial, sans-serif" font-size="22" font-weight="700" dominant-baseline="text-before-edge" fill="#ffffff">ticket</text>
+<text x="82" y="713" font-family="Arial, sans-serif" font-size="11" font-weight="700" dominant-baseline="text-before-edge" fill="#2b7283">PK</text>
+<text x="135" y="710" font-family="Arial, sans-serif" font-size="15" font-weight="700" dominant-baseline="text-before-edge" fill="#1a2f41">ticket_id</text>
+<text x="325" y="710" font-family="Arial, sans-serif" font-size="14" font-weight="400" dominant-baseline="text-before-edge" fill="#5c6f7f">integer</text>
+<polyline points="84,741 476,741" fill="none" stroke="#edf1f4" stroke-width="1"/>
+<text x="82" y="749" font-family="Arial, sans-serif" font-size="11" font-weight="700" dominant-baseline="text-before-edge" fill="#2b7283">FK</text>
+<text x="135" y="746" font-family="Arial, sans-serif" font-size="15" font-weight="700" dominant-baseline="text-before-edge" fill="#1a2f41">event_id</text>
+<text x="325" y="746" font-family="Arial, sans-serif" font-size="14" font-weight="400" dominant-baseline="text-before-edge" fill="#5c6f7f">integer</text>
+<polyline points="84,777 476,777" fill="none" stroke="#edf1f4" stroke-width="1"/>
+<text x="82" y="785" font-family="Arial, sans-serif" font-size="11" font-weight="700" dominant-baseline="text-before-edge" fill="#2b7283">FK</text>
+<text x="135" y="782" font-family="Arial, sans-serif" font-size="15" font-weight="700" dominant-baseline="text-before-edge" fill="#1a2f41">user_id</text>
+<text x="325" y="782" font-family="Arial, sans-serif" font-size="14" font-weight="400" dominant-baseline="text-before-edge" fill="#5c6f7f">integer</text>
+<polyline points="84,813 476,813" fill="none" stroke="#edf1f4" stroke-width="1"/>
+<text x="135" y="818" font-family="Arial, sans-serif" font-size="15" font-weight="700" dominant-baseline="text-before-edge" fill="#1a2f41">price</text>
+<text x="325" y="818" font-family="Arial, sans-serif" font-size="14" font-weight="400" dominant-baseline="text-before-edge" fill="#5c6f7f">price_domain</text>
+<polyline points="84,849 476,849" fill="none" stroke="#edf1f4" stroke-width="1"/>
+<text x="135" y="854" font-family="Arial, sans-serif" font-size="15" font-weight="700" dominant-baseline="text-before-edge" fill="#1a2f41">purchase_date</text>
+<text x="325" y="854" font-family="Arial, sans-serif" font-size="14" font-weight="400" dominant-baseline="text-before-edge" fill="#5c6f7f">timestamp</text>
+<rect x="1190" y="550" width="420" height="176" fill="#ffffff" stroke="#ccd7e0"/>
+<rect x="1190" y="550" width="420" height="50" fill="#183f58"/>
+<text x="1208" y="563" font-family="Arial, sans-serif" font-size="22" font-weight="700" dominant-baseline="text-before-edge" fill="#ffffff">event_sponsor</text>
+<text x="1202" y="613" font-family="Arial, sans-serif" font-size="11" font-weight="700" dominant-baseline="text-before-edge" fill="#2b7283">PK, FK</text>
+<text x="1255" y="610" font-family="Arial, sans-serif" font-size="15" font-weight="700" dominant-baseline="text-before-edge" fill="#1a2f41">event_id</text>
+<text x="1445" y="610" font-family="Arial, sans-serif" font-size="14" font-weight="400" dominant-baseline="text-before-edge" fill="#5c6f7f">integer</text>
+<polyline points="1204,641 1596,641" fill="none" stroke="#edf1f4" stroke-width="1"/>
+<text x="1202" y="649" font-family="Arial, sans-serif" font-size="11" font-weight="700" dominant-baseline="text-before-edge" fill="#2b7283">PK, FK</text>
+<text x="1255" y="646" font-family="Arial, sans-serif" font-size="15" font-weight="700" dominant-baseline="text-before-edge" fill="#1a2f41">sponsor_id</text>
+<text x="1445" y="646" font-family="Arial, sans-serif" font-size="14" font-weight="400" dominant-baseline="text-before-edge" fill="#5c6f7f">integer</text>
+<polyline points="1204,677 1596,677" fill="none" stroke="#edf1f4" stroke-width="1"/>
+<text x="1255" y="682" font-family="Arial, sans-serif" font-size="15" font-weight="700" dominant-baseline="text-before-edge" fill="#1a2f41">level_of_sponsorship</text>
+<text x="1445" y="682" font-family="Arial, sans-serif" font-size="14" font-weight="400" dominant-baseline="text-before-edge" fill="#5c6f7f">sponsorship_level</text>
+<text x="70" y="953" font-family="Arial, sans-serif" font-size="16" font-weight="700" dominant-baseline="text-before-edge" fill="#346482">READING THE DIAGRAM</text>
+<text x="70" y="985" font-family="Arial, sans-serif" font-size="17" font-weight="400" dominant-baseline="text-before-edge" fill="#1a2f41">PK: primary key   FK: foreign key   UQ: unique   ?: nullable</text>
+<text x="70" y="1013" font-family="Arial, sans-serif" font-size="17" font-weight="400" dominant-baseline="text-before-edge" fill="#1a2f41">1 = exactly one parent; 0..* = zero or more children. event_sponsor uses a composite primary key.</text>
+</svg>

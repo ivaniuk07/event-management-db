@@ -1,0 +1,46 @@
+erDiagram
+    direction LR
+    User ||--o{ organizer : has
+    User ||--o{ ticket : purchases
+    organizer ||--o{ event : organizes
+    event ||--o{ ticket : has
+    event ||--o{ event_sponsor : receives
+    sponsor ||--o{ event_sponsor : supports
+    User {
+        integer user_id PK "NOT NULL"
+        varchar(100) name "NOT NULL"
+        email_domain email UK "NOT NULL"
+    }
+    organizer {
+        integer organizer_id PK "NOT NULL"
+        varchar(100) name "NOT NULL"
+        email_domain email UK "NOT NULL"
+        integer user_id FK "NOT NULL"
+    }
+    sponsor {
+        integer sponsor_id PK "NOT NULL"
+        varchar(100) name "NOT NULL"
+        email_domain email UK "NOT NULL"
+        phone_domain number "nullable"
+    }
+    event {
+        integer event_id PK "NOT NULL"
+        varchar(200) name "NOT NULL"
+        text description "nullable"
+        varchar(300) address "NOT NULL"
+        timestamp date_start "NOT NULL"
+        timestamp date_end "NOT NULL"
+        integer organizer_id FK "NOT NULL"
+    }
+    ticket {
+        integer ticket_id PK "NOT NULL"
+        integer event_id FK "NOT NULL"
+        integer user_id FK "NOT NULL"
+        price_domain price "NOT NULL"
+        timestamp purchase_date "NOT NULL"
+    }
+    event_sponsor {
+        integer event_id PK,FK "NOT NULL"
+        integer sponsor_id PK,FK "NOT NULL"
+        sponsorship_level level_of_sponsorship "NOT NULL"
+    }
